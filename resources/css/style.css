@@ -16,7 +16,6 @@ html, body {
 
 a {
   cursor: pointer;
-  font-size: 16px;
   text-decoration: none;
   color: #62B132;
   border-bottom: 1px dashed #62B132;
