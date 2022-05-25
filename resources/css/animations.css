@@ -1,0 +1,120 @@
+:root {
+  --text-shadow-blue: rgba(0, 20, 255, 0.5);
+  --text-shadow-red: rgba(255, 0, 70, 0.5);
+}
+
+/* Animations */
+@keyframes screen-fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes crt-on {
+  0% {
+    box-shadow: none;
+    transform: scale(0.1, 0);
+  }
+  60% {
+    box-shadow: inset 0 10000px white;
+    transform: scale(1, 0.01);
+  }
+  99% {
+    transform: scale(1, 1);
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: inset 0 0 12px rgba(0, 255, 255, 0.7);
+  }
+}
+
+@keyframes crt-flicker {
+  0% {
+    opacity: 0.27;
+  }
+  10% {
+    opacity: 0.23;
+  }
+  20% {
+    opacity: 0.18;
+  }
+  30% {
+    opacity: 0.65;
+  }
+  40% {
+    opacity: 0.26;
+  }
+  50% {
+    opacity: 0.76;
+  }
+  60% {
+    opacity: 0.2;
+  }
+  70% {
+    opacity: 0.53;
+  }
+  80% {
+    opacity: 0.71;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0.24;
+  }
+}
+
+@keyframes crt-text-flicker {
+  0% {
+    text-shadow: 0.43px 0 1px var(--text-shadow-blue),
+      -0.43px 0 1px var(--text-shadow-red), 0 0 3px;
+  }
+  10% {
+    text-shadow: 0.22px 0 1px var(--text-shadow-blue),
+      -0.22px 0 1px var(--text-shadow-red), 0 0 3px;
+  }
+  20% {
+    text-shadow: 0.38px 0 1px var(--text-shadow-blue),
+      -0.38px 0 1px var(--text-shadow-red), 0 0 3px;
+  }
+  30% {
+    text-shadow: 0.2px 0 1px var(--text-shadow-blue),
+      -0.2px 0 1px var(--text-shadow-red), 0 0 3px;
+  }
+  40% {
+    text-shadow: 0.37px 0 1px var(--text-shadow-blue),
+      -0.37px 0 1px var(--text-shadow-red), 0 0 3px;
+  }
+  50% {
+    text-shadow: 0.08px 0 1px var(--text-shadow-blue),
+      -0.08px 0 1px var(--text-shadow-red), 0 0 3px;
+  }
+  60% {
+    text-shadow: 0.15px 0 1px var(--text-shadow-blue),
+      -0.15px 0 1px var(--text-shadow-red), 0 0 3px;
+  }
+  70% {
+    text-shadow: 0.28px 0 1px var(--text-shadow-blue),
+      -0.28px 0 1px var(--text-shadow-red), 0 0 3px;
+  }
+  80% {
+    text-shadow: 0.18px 0 1px var(--text-shadow-blue),
+      -0.18px 0 1px var(--text-shadow-red), 0 0 3px;
+  }
+  90% {
+    text-shadow: 1.44px 0 1px var(--text-shadow-blue),
+      -1.44px 0 1px var(--text-shadow-red), 0 0 3px;
+  }
+  100% {
+    text-shadow: 1.62px 0 1px var(--text-shadow-blue),
+      -1.62px 0 1px var(--text-shadow-red), 0 0 3px;
+  }
+}
