@@ -10,18 +10,22 @@
     />
     <link href="https://unpkg.com/98.css" rel="stylesheet" type="text/css" />
     <link href="resources/css/style.css" rel="stylesheet" type="text/css" />
-    <link href="resources/css/animations.css" rel="stylesheet" type="text/css" />
+    <link
+      href="resources/css/animations.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <link href="resources/assets/logo.ico" rel="icon" />
   </head>
   <body>
     <div id="crt">
       <canvas id="starfield"></canvas>
       <main>
-        <nav>
+        <div class="btn-bar">
           <button onClick="toggleWindow('about')">About</button>
           <button onClick="toggleWindow('projects')">Projects</button>
-          <a target="_blank" href="resources/assets/Resume.pdf"><button>Resume</button></a>
-        </nav>
+          <button onClick="toggleWindow('settings')">Settings</button>
+        </div>
 
         <div id="about" class="window win" style="display: none;">
           <div class="title-bar">
@@ -44,6 +48,21 @@
               with javascript and graphics. This site is where I host my
               personal projects.
             </p>
+            <div class="btn-bar-wrapper">
+              <div class="btn-bar">
+                <a target="_blank" href="resources/assets/Resume.pdf"
+                  ><button>Resume</button></a
+                >
+                <a target="_blank" href="https://www.github.com/cmlenius"
+                  ><button>Github</button></a
+                >
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/cameron-lenius-103663111/"
+                  ><button>Linkedin</button></a
+                >
+              </div>
+            </div>
           </div>
         </div>
 
@@ -156,6 +175,56 @@
                 <img src="resources/assets/ColourBounce.gif" />
               </div>
             </div>
+          </div>
+        </div>
+
+        <div id="settings" class="window win" style="display: none;">
+          <div class="title-bar">
+            <div class="title-bar-text">Settings</div>
+            <div class="title-bar-controls">
+              <button
+                aria-label="Close"
+                onClick="closeWindow('settings')"
+              ></button>
+            </div>
+          </div>
+          <div class="window-body win-body">
+            <h2>Settings</h2>
+            <p>Toggle and/or adjust settings for this site</p>
+            <input
+              type="checkbox"
+              checked="true"
+              id="crt-flicker-checkbox"
+              onchange="toggleCRTFlicker(this)"
+            />
+            <label for="crt-flicker-checkbox">CRT Flicker Effect</label>
+            <br />
+            <input
+              type="checkbox"
+              checked="true"
+              id="crt-text-flicker-checkbox"
+              onchange="toggleCRTTextFlicker(this)"
+            />
+            <label for="crt-text-flicker-checkbox"
+              >CRT Text Flicker Effect</label
+            >
+            <br />
+            <input
+              type="checkbox"
+              checked="true"
+              id="crt-lines-checkbox"
+              onchange="toggleCRTLines(this)"
+            />
+            <label for="crt-lines-checkbox">CRT Line Effect</label>
+            <br />
+            <input
+              type="checkbox"
+              checked="true"
+              id="starfield-checkbox"
+              onchange="toggleBackgroundAnimation(this)"
+            />
+            <label for="starfield-checkbox">Background Animation</label>
+            <br />
           </div>
         </div>
       </main>

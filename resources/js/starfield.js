@@ -19,6 +19,11 @@ function resizeCanvas() {
   initializeStars();
 }
 
+function clearStars() {
+  c.fillStyle = "rgba(10,20,30,1)";
+  c.fillRect(0, 0, canvas.width, canvas.height);
+}
+
 function initializeStars() {
   centerX = canvas.width / 2;
   centerY = canvas.height / 2;

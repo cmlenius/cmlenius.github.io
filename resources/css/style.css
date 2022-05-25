@@ -1,5 +1,9 @@
 :root {
   --font: "Georgia";
+  --crt-flicker-animation: crt-flicker 0.15s infinite;
+  --crt-text-flicker-animation: crt-text-flicker 2.5s infinite;
+  --crt-lines-background-size: 100% 2px, 4px 100%;
+  --primary-color: rgba(0, 255, 255, 0.7);
 }
 
 html,
@@ -36,7 +40,7 @@ body {
   opacity: 0;
   z-index: 2;
   pointer-events: none;
-  animation: crt-flicker 0.15s infinite;
+  animation: var(--crt-flicker-animation);
 }
 
 #crt::before {
@@ -55,12 +59,12 @@ body {
       rgba(0, 0, 255, 0.06)
     );
   z-index: 2;
-  background-size: 100% 2px, 4px 100%;
+  background-size: var(--crt-lines-background-size);
   pointer-events: none;
 }
 
 canvas {
-  animation: screen-fade-in 5s linear;
+  animation: screen-fade-in 3s linear;
   margin: 8px;
   position: absolute;
   width: calc(100% - 24px);
@@ -68,7 +72,7 @@ canvas {
 }
 
 main {
-  animation: screen-fade-in 5s linear, crt-text-flicker 2.5s infinite;
+  animation: screen-fade-in 3s linear, var(--crt-text-flicker-animation);
   height: 100%;
   width: 100vw;
 
@@ -78,19 +82,35 @@ main {
 }
 
 /* Element Styling */
-button {
-  font-family: var(--font), sans-serif;
-  font-size: 16px;
-  min-height: 24px;
+br {
+  content: " ";
+  display: block;
+  margin: 12px 0;
 }
 
-nav {
+label {
+  font-size: 16px;
+}
+
+button {
+  animation: var(--crt-text-flicker-animation);
+  font-family: var(--font), sans-serif;
+  font-size: 16px;
+  min-height: 30px;
+}
+
+.btn-bar-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-bar {
   display: flex;
   margin: 36px 0;
 }
 
-nav > button,
-nav > a {
+.btn-bar > button,
+.btn-bar > a {
   margin: 0 24px;
 }
 
@@ -133,8 +153,8 @@ nav > a {
 footer {
   position: relative;
   bottom: 1.5em;
-  box-shadow: 0 0 12px rgba(0, 255, 255, 0.7);
-  background-color: #00cccc;
+  box-shadow: 0 0 12px var(--primary-color);
+  background-color: var(--primary-color);
   color: #000;
   font-family: "Sacramento", cursive !important;
   font-size: 1.2em;
