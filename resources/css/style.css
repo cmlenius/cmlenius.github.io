@@ -2,7 +2,7 @@
   --font: "Georgia";
   --crt-flicker-animation: crt-flicker 0.15s infinite;
   --crt-text-flicker-animation: crt-text-flicker 2.5s infinite;
-  --crt-lines-background-size: 100% 2px, 4px 100%;
+  --crt-lines-background-size: 100% 3px, 6px 100%;
   --primary-color: rgba(0, 255, 255, 0.7);
 }
 
@@ -54,9 +54,9 @@ body {
   background: linear-gradient(rgba(24, 24, 24, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
     linear-gradient(
       90deg,
-      rgba(255, 0, 0, 0.06),
-      rgba(0, 255, 0, 0.06),
-      rgba(0, 0, 255, 0.06)
+      rgba(255, 0, 0, 0.03),
+      rgba(0, 255, 0, 0.03),
+      rgba(0, 0, 255, 0.03)
     );
   z-index: 2;
   background-size: var(--crt-lines-background-size);
@@ -110,8 +110,8 @@ button {
 }
 
 .btn-bar > button,
-.btn-bar > a {
-  margin: 0 24px;
+.btn-bar > a:not(:first-child):not(:last-child) {
+  margin: 0 12px;
 }
 
 /* Window */
@@ -145,7 +145,7 @@ button {
 .project > img {
   align-self: center;
   height: 300px;
-  margin: 8px 0;
+  margin: 16px 0;
   width: 300px;
 }
 
